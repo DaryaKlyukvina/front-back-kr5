@@ -9,14 +9,14 @@
                             @click="handleUndo"
                             :disabled="!canUndo"
                             title="Отменить (Ctrl+Z)">
-                            ↶
+                            <Icon icon="mdi:undo" width="20" height="20" />
                         </button>
                         <button
                             class="btn-history"
                             @click="handleRedo"
                             :disabled="!canRedo"
                             title="Повторить (Ctrl+Y)">
-                            ↷
+                            <Icon icon="mdi:redo" width="20" height="20" />
                         </button>
                     </div>
                     <button
@@ -144,6 +144,7 @@ import ContrastChecker from "../components/ContrastChecker.vue";
 import ColorWheel from "../components/ColorWheel.vue";
 import ExportImportModal from "../components/ExportImportModal.vue";
 import ShareModal from "../components/ShareModal.vue";
+import Icon from '@iconify/vue';
 import { useColorGenerator } from "../composables/useColorGenerator";
 import { useColorFormat } from "../composables/useColorFormat";
 import { useImport } from "../composables/useImport";

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import Icon from '@iconify/vue';
 import { useExport, type ExportFormat } from "../composables/useExport";
 
 const props = defineProps<{
@@ -102,7 +103,7 @@ const handleDownload = () => {
                 <div
                     v-if="showCopyNotification"
                     class="notification">
-                    ✓ Скопировано в буфер обмена
+                    <Icon icon="mdi:check" width="18" height="18" /> Скопировано в буфер обмена
                 </div>
             </div>
         </div>

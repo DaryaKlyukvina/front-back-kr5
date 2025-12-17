@@ -18,25 +18,25 @@
                     class="btn-icon"
                     @click="$emit('load', palette)"
                     title="Загрузить">
-                    📥
+                    <Icon icon="mdi:download" width="18" height="18" />
                 </button>
                 <button
                     class="btn-icon"
                     @click="$emit('duplicate', palette.id)"
                     title="Дублировать">
-                    📋
+                    <Icon icon="mdi:content-copy" width="18" height="18" />
                 </button>
                 <button
                     class="btn-icon"
                     @click="$emit('edit', palette.id)"
                     title="Редактировать">
-                    ✏️
+                    <Icon icon="mdi:pencil" width="18" height="18" />
                 </button>
                 <button
                     class="btn-icon btn-delete"
                     @click="$emit('delete', palette.id)"
                     title="Удалить">
-                    🗑️
+                    <Icon icon="mdi:trash-can" width="18" height="18" />
                 </button>
             </div>
         </div>
@@ -45,6 +45,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import Icon from '@iconify/vue';
 
 interface Props {
     palette: Palette;

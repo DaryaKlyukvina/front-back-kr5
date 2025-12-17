@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import Icon from '@iconify/vue';
 import { useImport } from "../composables/useImport";
 
 const emit = defineEmits<{
@@ -88,7 +89,7 @@ const loadExample = (code: string) => {
                 <div
                     v-if="error"
                     class="error-message">
-                    ⚠️ {{ error }}
+                    <Icon icon="mdi:alert" width="18" height="18" /> {{ error }}
                 </div>
 
                 <div class="examples">
@@ -115,7 +116,8 @@ const loadExample = (code: string) => {
                         @click="handleImport"
                         class="btn-import"
                         :disabled="loading">
-                        {{ loading ? "Импорт..." : "✓ Импортировать" }}
+                        <Icon v-if="!loading" icon="mdi:check" width="18" height="18" />
+                        {{ loading ? "Импорт..." : "Импортировать" }}
                     </button>
                 </div>
             </div>

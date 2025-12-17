@@ -8,7 +8,7 @@
                 class="lock-button"
                 :class="{ locked: color.locked }"
                 @click.stop="toggleLock">
-                {{ color.locked ? "🔒" : "🔓" }}
+                <Icon :icon="color.locked ? 'mdi:lock' : 'mdi:lock-open'" width="18" height="18" />
             </button>
         </div>
         <div class="color-info">
@@ -16,7 +16,7 @@
             <button
                 class="copy-button"
                 @click="handleClick">
-                📋
+                <Icon icon="mdi:content-copy" width="18" height="18" />
             </button>
         </div>
     </div>
@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import Icon from '@iconify/vue';
 import { useColorFormat } from "../composables/useColorFormat";
 
 interface Props {

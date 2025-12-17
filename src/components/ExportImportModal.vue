@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import Icon from '@iconify/vue';
 import { useExport, type ExportFormat } from "../composables/useExport";
 import { useImport } from "../composables/useImport";
 
@@ -161,7 +162,9 @@ const handleImport = () => {
 
                     <Transition name="fade">
                         <div v-if="showCopyNotification" class="notification">
-                            ✓ Скопировано в буфер обмена
+                            <div class="notification">
+                                <Icon icon="mdi:check" width="18" height="18" /> Скопировано в буфер обмена
+                            </div>
                         </div>
                     </Transition>
                 </div>
@@ -179,7 +182,7 @@ const handleImport = () => {
                         rows="8"></textarea>
 
                     <div v-if="importError" class="error-message">
-                        ⚠️ {{ importError }}
+                        <Icon icon="mdi:alert" width="18" height="18" /> {{ importError }}
                     </div>
 
                     <div class="examples">
@@ -204,7 +207,8 @@ const handleImport = () => {
                             @click="handleImport"
                             class="btn-import"
                             :disabled="importLoading">
-                            {{ importLoading ? "Импорт..." : "✓ Импортировать" }}
+                            <Icon v-if="!importLoading" icon="mdi:check" width="18" height="18" />
+                            {{ importLoading ? "Импорт..." : "Импортировать" }}
                         </button>
                     </div>
                 </div>

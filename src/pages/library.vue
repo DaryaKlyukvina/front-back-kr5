@@ -46,7 +46,7 @@
             <div
                 v-else
                 class="empty-state">
-                <div class="empty-icon">🎨</div>
+                <div class="empty-icon"><Icon icon="mdi:palette" width="80" height="80" /></div>
                 <h2>{{ searchQuery ? "Ничего не найдено" : "Библиотека пуста" }}</h2>
                 <p>
                     {{
@@ -102,6 +102,7 @@ import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import { usePaletteStore } from "../stores/palettes";
 import PaletteCard from "../components/PaletteCard.vue";
+import Icon from '@iconify/vue';
 
 const router = useRouter();
 const paletteStore = usePaletteStore();

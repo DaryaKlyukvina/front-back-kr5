@@ -42,19 +42,22 @@
                         class="level-badge"
                         :class="{ pass: pair.contrast.AAA }">
                         <span class="level-label">AAA</span>
-                        <span class="level-status">{{ pair.contrast.AAA ? "✓" : "✗" }}</span>
+                        <Icon v-if="pair.contrast.AAA" icon="mdi:check" width="18" height="18" class="level-status" />
+                        <Icon v-else icon="mdi:close" width="18" height="18" class="level-status" />
                     </div>
                     <div
                         class="level-badge"
                         :class="{ pass: pair.contrast.AA }">
                         <span class="level-label">AA</span>
-                        <span class="level-status">{{ pair.contrast.AA ? "✓" : "✗" }}</span>
+                        <Icon v-if="pair.contrast.AA" icon="mdi:check" width="18" height="18" class="level-status" />
+                        <Icon v-else icon="mdi:close" width="18" height="18" class="level-status" />
                     </div>
                     <div
                         class="level-badge"
                         :class="{ pass: pair.contrast.AALarge }">
                         <span class="level-label">AA Large</span>
-                        <span class="level-status">{{ pair.contrast.AALarge ? "✓" : "✗" }}</span>
+                        <Icon v-if="pair.contrast.AALarge" icon="mdi:check" width="18" height="18" class="level-status" />
+                        <Icon v-else icon="mdi:close" width="18" height="18" class="level-status" />
                     </div>
                 </div>
 
@@ -80,6 +83,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import Icon from '@iconify/vue';
 import { useAccessibility } from "../composables/useAccessibility";
 
 interface Props {
