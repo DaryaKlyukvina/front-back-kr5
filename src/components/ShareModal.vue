@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 
 const props = defineProps<{
@@ -24,7 +24,6 @@ const handleCopy = async () => {
     }
 };
 
-const shareTitle = "Color Palette";
 const shareText = "Посмотри какую крутую палитру я создал!";
 
 const handleShare = async (method: "twitter" | "facebook" | "telegram" | "whatsapp") => {
