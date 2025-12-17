@@ -568,6 +568,23 @@ onMounted(() => {
     transition: all 0.2s;
 }
 
+.btn-secondary {
+    background: #f7fafc;
+    color: #2d3748;
+    border: 2px solid #e2e8f0;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
 .btn-primary {
     background: #4a5568;
     color: white;
