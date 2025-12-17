@@ -8,7 +8,7 @@
                 class="theme-toggle"
                 @click="toggleTheme"
                 :title="isDarkMode ? 'Светлая тема' : 'Темная тема'">
-                <Icon :icon="isDarkMode ? 'mdi:white-balance-sunny' : 'mdi:moon-waning-crescent'" width="20" height="20" />
+                <Icon :icon="isDarkMode ? 'mdi:white-balance-sunny' : 'mdi:moon-waning-crescent'" width="20" height="20" :style="{ color: isDarkMode ? 'white' : undefined }" />
             </button>
         </div>
 
@@ -88,7 +88,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { colord } from "colord";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 
 interface Props {
     colors: Color[];

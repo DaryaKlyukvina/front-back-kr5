@@ -102,7 +102,7 @@ import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import { usePaletteStore } from "../stores/palettes";
 import PaletteCard from "../components/PaletteCard.vue";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 
 const router = useRouter();
 const paletteStore = usePaletteStore();

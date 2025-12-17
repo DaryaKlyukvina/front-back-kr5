@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { useImport } from "../composables/useImport";
 
 const emit = defineEmits<{

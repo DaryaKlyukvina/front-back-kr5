@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { useColorFormat } from "../composables/useColorFormat";
 
 interface Props {

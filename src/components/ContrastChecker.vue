@@ -83,7 +83,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { useAccessibility } from "../composables/useAccessibility";
 
 interface Props {

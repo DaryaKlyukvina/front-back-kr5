@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { useExport, type ExportFormat } from "../composables/useExport";
 
 const props = defineProps<{
